@@ -216,12 +216,12 @@ void draw() {
     // Questão F
     translate(750, 450);
     
-    float u = frameCount;
+    float u = frameCount / 100.0;
     
-    float ux = cos(u) * (pow(2.71828, cos(u)) - 2 * cos(4 * u) - pow(sin(u / 12), 5));
-    float uy = sin(u) * (pow(2.71828, cos(u)) - 2 * cos(4 * u) - pow(sin(u / 12), 5));
+    float ux = 35 * cos(u) * (exp(cos(u)) - 2 * cos(4 * u) - sin(pow(u / 12, 5)));
+    float uy = 35 * sin(u) * (exp(cos(u)) - 2 * cos(4 * u) - sin(pow(u / 12, 5)));
     
-    circle(ux, uy, 10);
+    circle(ux, uy, 5);
     
     translate(-750, -450);
     
