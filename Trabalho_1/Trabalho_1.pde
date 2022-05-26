@@ -228,6 +228,23 @@ void draw() {
     // Questão G
     translate(150, 750);
     
+    float rtheta = frameCount / 100.0;
+    
+    float ra = 0.5;
+    float rb = 0.2;
+    
+    float R = 70;
+    
+    float r1 = 10;
+    float r2 = 0.2;
+    
+    float r = R * (1 + ra * cos(2 * rtheta + r1) + rb * cos(3 * rtheta + r2));
+    
+    float rx = r * cos(rtheta);
+    float ry = r * sin(rtheta);
+    
+    circle(rx, ry, 5);
+    
     translate(-150, -750);
     
     // Questão H
